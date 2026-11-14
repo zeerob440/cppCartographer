@@ -14,7 +14,7 @@ Proudly Engineered by Zachary Roberts 14 NOV 2026
 
 int main () {
 
-    cout <<"Welcome to cppCartographer" << endl;
+    cout <<"Welcome to cppCartographer!" << endl;
 
     return 0;    
 }
