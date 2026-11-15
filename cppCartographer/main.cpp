@@ -32,17 +32,14 @@ int main () {
         // route navigation request
         int user_selection; 
         cout << "SELECT LEARNING OBJECTIVE" << endl;
-        cin >> user_selection; 
-
-        // invoke input validation function, checks if string was entered
-        validthing(); 
+       
         // ! NOT 
-        if (!validthing()) {
+        if (!validthing(user_selection)) {
             continue;
         }
         // since each menu will have unique ranges, this line will need to be added into each menu selection
         // TODO REMEMBER TO UPDATE AS EACH MENU IS ADDED
-        if (user_selection >= 0 && user_selection <= 1){
+        if (user_selection < 0 || user_selection > 1){
             cout << "SELECTION OUT OF RANGE!" << endl;
             continue;
         }
