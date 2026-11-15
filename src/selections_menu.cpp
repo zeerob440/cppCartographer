@@ -5,7 +5,7 @@ using namespace std;
 
 void selections_menu() {
 
-    cout << "Selections menu goes here" << endl;
+    cout << "Selections menu goes here\n" << endl;
 
     abc();
 
