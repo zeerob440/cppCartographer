@@ -1,3 +1,4 @@
 #pragma once
 
-bool validthing(); 
+// passes the original variable by reference
+bool validthing(int& user_selection); 
