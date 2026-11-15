@@ -2,7 +2,7 @@
 #include <string>
 #include <cstdlib>
 #include "../include/selections_menu.hpp"
-#include "../include/input_vlad.hpp"
+#include "../include/validthing.hpp"
 using namespace std; 
 
 /*VERSION: Alpha
@@ -36,9 +36,9 @@ int main () {
         cin >> user_selection; 
 
         // invoke input validation function
-        input_vlad(); 
+        validthing(); 
         // ! NOT 
-        if (!input_vlad()) {
+        if (!validthing()) {
             continue;
         }
 
