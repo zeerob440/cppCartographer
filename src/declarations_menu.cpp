@@ -3,7 +3,7 @@
 #include "../include/abc.hpp"
 using namespace std;
 
-void selections_menu() {
+void declarations_menu() {
 
     cout << "Declarations menu goes here" << endl;
 
