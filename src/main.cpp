@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <cstdlib>
+#include "../include/declarations_menu.hpp"
 #include "../include/selections_menu.hpp"
 #include "../include/validthing.hpp"
 using namespace std; 
@@ -24,7 +24,11 @@ int main () {
         // main navigation menu for user
 
         string main_menu = R"(MAIN MENU
-        1 = DECLARATIONS)"; 
+        0 = EXIT PROGRAM
+        1 = DECLARATIONS
+        2 = SELECTIONS MENU
+
+        )"; 
 
         // print main navigation menu
         cout << main_menu << endl;
@@ -39,7 +43,7 @@ int main () {
         }
         // since each menu will have unique ranges, this line will need to be added into each menu selection
         // TODO REMEMBER TO UPDATE AS EACH MENU IS ADDED
-        if (user_selection < 0 || user_selection > 1){
+        if (user_selection < 0 || user_selection > 2){
             cout << "SELECTION OUT OF RANGE!" << endl;
             continue;
         }
@@ -48,7 +52,11 @@ int main () {
             break;
         }
         if (user_selection == 1) {
+            declarations_menu();
+        }
+        if (user_selection == 2) {
             selections_menu();
+            
         }
         
     }
