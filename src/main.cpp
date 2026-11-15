@@ -26,9 +26,7 @@ int main () {
         string main_menu = R"(MAIN MENU
         0 = EXIT PROGRAM
         1 = DECLARATIONS
-        2 = SELECTIONS MENU
-
-        )"; 
+        2 = SELECTIONS MENU)"; 
 
         // print main navigation menu
         cout << main_menu << endl;
@@ -52,9 +50,11 @@ int main () {
             break;
         }
         if (user_selection == 1) {
+            cout << "NAVIGATING TO DECLARATIONS MENU" << endl;
             declarations_menu();
         }
         if (user_selection == 2) {
+            cout << "NAVIGATING TO SELECTIONS MENU" << endl;
             selections_menu();
             
         }
