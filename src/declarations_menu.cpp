@@ -5,7 +5,7 @@ using namespace std;
 
 void declarations_menu() {
 
-    cout << "Declarations menu goes here\n" << endl;
+    cout << "Declarations menu goes here\n";
 
     abc();
     /*while(true) {}

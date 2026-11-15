@@ -19,7 +19,7 @@ int main () {
 
     while(true) {
 
-        cout <<"Welcome to cppCartographer!" << endl;
+        cout <<"Welcome to cppCartographer!\n";
 
         // main navigation menu for user
 
