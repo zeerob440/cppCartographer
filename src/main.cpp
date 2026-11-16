@@ -21,7 +21,7 @@ int main () {
 
     while(true) {
 
-        cout <<"Welcome to cppCartographer!\n" endl;
+        cout <<"Welcome to cppCartographer!\n" << endl;
 
         // main navigation menu for user
 
