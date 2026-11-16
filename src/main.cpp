@@ -21,7 +21,7 @@ int main () {
 
     while(true) {
 
-        cout <<"Welcome to cppCartographer!\n";
+        cout <<"Welcome to cppCartographer!\n" endl;
 
         // main navigation menu for user
 
@@ -31,11 +31,11 @@ int main () {
         2 = SELECTIONS MENU)"; 
 
         // print main navigation menu
-        cout << main_menu << endl;
+        cout << main_menu << endl << endl;
 
         // route navigation request
         int user_selection; 
-        cout << "SELECT LEARNING OBJECTIVE" << endl;
+        cout << "SELECT LEARNING OBJECTIVE\n" << endl;
        
         // ! NOT 
         if (!validthing(user_selection)) {
@@ -44,7 +44,7 @@ int main () {
         // since each menu will have unique ranges, this line will need to be added into each menu selection
         // TODO REMEMBER TO UPDATE AS EACH MENU IS ADDED
         if (user_selection < 0 || user_selection > 2){
-            cout << "SELECTION OUT OF RANGE!" << endl;
+            cout << "SELECTION OUT OF RANGE!\n" << endl;
             continue;
         }
         if (user_selection == 0) {
@@ -52,11 +52,11 @@ int main () {
             break;
         }
         if (user_selection == 1) {
-            cout << "NAVIGATING TO DECLARATIONS MENU" << endl;
+            cout << "NAVIGATING TO DECLARATIONS MENU\n" << endl;
             declarations_menu();
         }
         if (user_selection == 2) {
-            cout << "NAVIGATING TO SELECTIONS MENU" << endl;
+            cout << "NAVIGATING TO SELECTIONS MENU\n" << endl;
             selections_menu();
             
         }

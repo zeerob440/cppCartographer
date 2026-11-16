@@ -28,7 +28,7 @@ bool validthing(int& user_selection) {
 
         if (position != input.size()) {
             // throw is C++ keyword similar to Python's 'raise'. invalid_argument is an exception class from <stdexcept>
-            throw invalid_argument("Invalid characters");
+            throw invalid_argument("Invalid characters\n");
         }
 
         return true;
@@ -39,12 +39,12 @@ bool validthing(int& user_selection) {
     // in otherwords use the original value for comparison not a copy
     // to use a copy syntax would be (invalid_argument& e)
     catch (invalid_argument&) {
-        cout << "INVALID INPUT! ENTER AN INTEGER." << endl;
+        cout << "INVALID INPUT! ENTER AN INTEGER.\n" << endl;
         return false;
     }
     // out_of_range is from the <stdexcept> library, it prevents input vale from overwhelming an int datatype.
     catch (out_of_range&) {
-        cout << "INTEGER OUT OF RANGE!" << endl;
+        cout << "INTEGER OUT OF RANGE!\n" << endl;
         return false;
     }
 }
