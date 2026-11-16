@@ -15,8 +15,6 @@ Proudly Engineered by Zachary Roberts 14 NOV 2026
 
 "Were it so easy." - The Arbiter HALO 3"*/
 
-
-//TODO: fix line breaks, recompile, test. Start building lessons.
 int main () {
 
     while(true) {
