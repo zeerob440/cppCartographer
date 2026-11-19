@@ -73,16 +73,32 @@ using namespace std;
         It is declared such that:
         
         bool boolstuff = false;
+
+        cout interprets bools such that:
+
+        false = 0
+        true = 1 
+        AND 
+        1 = true 
+        0 = false
+
+        So 
+
+        bool other_bool = 1;
         
-        Continue to run our bool)";
+        will print true!
+        
+        Continue to run our bools)";
 
         cout << datatype3 << endl << endl;
 
         abc();
 
         bool boolstuff = false;
+        bool other_bool = 1;
 
-        cout << "C++ is boolstuff =" << boolstuff << endl << endl;
+        cout << "C++ is boolstuff = " << boolstuff << endl << endl;
+        cout << "other_bool is number: " << other_bool << endl <<endl;
 
         abc();
 
@@ -157,7 +173,7 @@ void declarations_menu() {
         string s_main_menu =  R"(DECLARATIONS MENU
         SELECT A TOPIC FOR REVIEW
         0 = EXIT TO MAIN
-        1 = DECLARATIONS)";
+        1 = BASIC DATATYPES)";
 
       
         cout << s_main_menu << endl;
