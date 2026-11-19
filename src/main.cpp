@@ -24,6 +24,7 @@ int main () {
         // main navigation menu for user
 
         string main_menu = R"(MAIN MENU
+        SELECT LEARNING OBJECTIVE
         0 = EXIT PROGRAM
         1 = DECLARATIONS
         2 = SELECTIONS MENU)"; 
@@ -33,8 +34,7 @@ int main () {
 
         // route navigation request
         int user_selection; 
-        cout << "SELECT LEARNING OBJECTIVE\n" << endl;
-       
+        
         // ! NOT 
         if (!validthing(user_selection)) {
             continue;
