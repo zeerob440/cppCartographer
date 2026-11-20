@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <array>
 #include "../include/abc.hpp"
 #include "../include/validthing.hpp"
 using namespace std;
@@ -8,7 +9,7 @@ using namespace std;
 
     // basic datatype lesson, daughter function of declarations menu
     void basic_datatypes() {
-        cout << "C++ BASIC DATA TYPES\n";
+        cout << "C++ BASIC DATATYPES\n";
 
         string datatype1 = R"(INTEGERS
         
@@ -159,6 +160,78 @@ using namespace std;
 
         abc();
     }
+    // lesson for collections datatypes
+    void datatype_collections_array() {
+        cout << "COLLECTION DATATYPE ARRAY\n";
+
+        string collesson1 = R"(ARRAYS
+        
+        There are two types of ARRAYS in C++ the built-in array and the std library array accessed by #include <array>).
+        We'll go through both examples. 
+        
+        C++ Arrays must have: fixed number of indexes on declaration, and contain the same datatype. Raw arrays
+        CANNOT be printed but elements can. So to print an entire array if must be done with a loop or a compile error
+        will occur.  
+
+        BUILT-IN declaration syntax: datatype arrayName[numIndices] = {eezo, eone, etwo};
+
+        for example:
+
+        string string_array[3] = {"eezo", "eone", "etwo"};
+
+        STANDARD_LIBRARY array syntax: array libray_array(dataType, numIndicies) = {eezo, eone, etwo};
+
+        for example: 
+
+        array <int, 3> int_array  = {00, 10, 20};
+
+        Lets print these Arrays!)";
+
+        cout << collesson1 << endl << endl;
+
+        abc();
+        
+         // string example of the array we are going to run
+        string bi_array = R"(string string_array[3] = {"eezo", "eone", "etwo"})";
+
+        cout << "next we will cout:" << "\n" << bi_array << "\n" << "Continue to run code!" << "\n";
+
+        abc();
+        string string_array[3] = {"eezo", "eone", "etwo"};
+        /*
+        outputs
+        eezo
+        eone
+        etwo
+        */
+        for (string element : string_array){
+            cout << element << "\n"; 
+        }
+        
+        abc();
+
+        // string for next example array.
+        string stdlib_array = R"( array <int, 3> int_array = {00, 10, 20})";
+        cout << "Next we will cout:" << "\n" << stdlib_array << "\n" << "Continue to run code" << "\n";
+
+        abc();
+        array <int, 3> int_array = {00, 10, 20};
+        /*
+        cout 
+        00
+        10
+        20
+        */
+        for (int number : int_array){
+            cout << number << "\n";
+        }
+
+        cout << "THIS CONCLUDES THIS MODULE\n" << endl;
+        
+        abc();
+
+
+    }
 
 // menu for declarations lesson.
 void declarations_menu() {
@@ -173,7 +246,8 @@ void declarations_menu() {
         string s_main_menu =  R"(DECLARATIONS MENU
         SELECT A TOPIC FOR REVIEW
         0 = EXIT TO MAIN
-        1 = BASIC DATATYPES)";
+        1 = BASIC DATATYPES
+        2 = COLLECTION DATATYPE: ARRAY)";
 
       
         cout << s_main_menu << endl;
@@ -186,15 +260,18 @@ void declarations_menu() {
         }
         // since each menu will have unique ranges, this line will need to be added into each menu selection
         // TODO REMEMBER TO UPDATE AS EACH MENU IS ADDED
-        if (dec_selection < 0 || dec_selection > 1){
+        if (dec_selection < 0 || dec_selection > 2){
             cout << "SELECTION OUT OF RANGE!\n" << endl;
             continue;
         }
         if (dec_selection == 0){
             return;
         }
-        if (dec_selection ==1){
+        if (dec_selection == 1 ){
             basic_datatypes();
+        }
+        if (dec_selection == 2) {
+            datatype_collections_array();
         }
 
     }
