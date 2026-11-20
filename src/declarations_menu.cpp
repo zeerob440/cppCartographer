@@ -277,6 +277,8 @@ using namespace std;
         Continue to add ethree to my_vector!
         )";
 
+        cout << veclesson2 << "\n";
+
         abc();
         // adds ethree to last element in my_vector
 
