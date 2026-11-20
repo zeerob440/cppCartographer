@@ -6,7 +6,7 @@
 #include "../include/validthing.hpp"
 using namespace std;
 
-// TODO: complete vector lesson.
+// TODO: complete vector lesson, add erase lessons.
 
     // basic datatype lesson, daughter function of declarations menu
     void basic_datatypes() {
