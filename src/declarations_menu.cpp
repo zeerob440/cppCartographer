@@ -170,7 +170,7 @@ using namespace std;
         We'll go through both examples. 
         
         C++ Arrays must have: fixed number of indexes on declaration, and contain the same datatype. Raw arrays
-        CANNOT be printed but elements can. So to print an entire array if must be done with a loop or a compile error
+        CANNOT be printed but elements can. So to print an entire array it must be done with a loop or a compile error
         will occur.  
 
         BUILT-IN declaration syntax: datatype arrayName[numIndices] = {eezo, eone, etwo};
@@ -183,7 +183,7 @@ using namespace std;
 
         for example: 
 
-        array <int, 3> int_array  = {00, 10, 20};
+        array <int, 3> int_array  = {0, 10, 20};
 
         Lets print these Arrays!)";
 
@@ -194,7 +194,7 @@ using namespace std;
          // string example of the array we are going to run
         string bi_array = R"(string string_array[3] = {"eezo", "eone", "etwo"})";
 
-        cout << "next we will cout:" << "\n" << bi_array << "\n" << "Continue to run code!" << "\n";
+        cout << "Next we will cout:" << "\n" << bi_array << "\n" << "Continue to run code!" << "\n";
 
         abc();
         string string_array[3] = {"eezo", "eone", "etwo"};
@@ -211,11 +211,11 @@ using namespace std;
         abc();
 
         // string for next example array.
-        string stdlib_array = R"( array <int, 3> int_array = {00, 10, 20})";
+        string stdlib_array = R"( array <int, 3> int_array = {0, 10, 20})";
         cout << "Next we will cout:" << "\n" << stdlib_array << "\n" << "Continue to run code" << "\n";
 
         abc();
-        array <int, 3> int_array = {00, 10, 20};
+        array <int, 3> int_array = {0, 10, 20};
         /*
         cout 
         00
