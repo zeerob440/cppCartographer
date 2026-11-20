@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
 #include <array>
+#include <vector>
 #include "../include/abc.hpp"
 #include "../include/validthing.hpp"
 using namespace std;
 
-// TODO: add basic datatype selections
+// TODO: complete vector lesson.
 
     // basic datatype lesson, daughter function of declarations menu
     void basic_datatypes() {
@@ -161,6 +162,7 @@ using namespace std;
         abc();
     }
     // lesson for collections datatypes
+    // daughter function of selections_menu()
     void datatype_collections_array() {
         cout << "COLLECTION DATATYPE ARRAY\n";
 
@@ -232,12 +234,130 @@ using namespace std;
 
 
     }
+    void cdatatype_vector() {
+        string veclesson = R"(VECTORS
+        
+        Vectors require and #include <vector> to be used. Vectors require same datatype, but 
+        unlike an array, indicies in a vector are not fixed. 
+
+        To declare a vector: vector<dataType> vectorName = {};
+
+        OR
+
+        vector<string> my_vector = {"eezo", "eone", "etwo"};
+
+        Continue to print this vector!
+        )";
+
+        cout << veclesson << endl;
+
+        abc();
+
+        vector<string> my_vector = {"eezo", "eone", "etwo"}; 
+
+        /*
+        cout
+        eezo
+        eone
+        etow
+        */
+        for (string element : my_vector) {
+            cout << element << "\n";
+        }
+
+        abc();
+
+        string veclesson2 = R"(APPENDING VECTORS WITH push_back()
+        
+        Since vectors can have additional indicies added to them, use push_back(value) to add a new value an index!
+        such that:
+
+        my_vector.push_back("ethree");
+
+        Continue to add ethree to my_vector!
+        )";
+
+        abc();
+        // adds ethree to last element in my_vector
+
+        my_vector.push_back("ethree");
+
+        /*
+        cout
+        eezo
+        eone
+        etwo
+        ethree
+        */
+        for (string element : my_vector) {
+            cout << element << "\n";
+        }
+
+        abc();
+
+        string veclesson3 = R"(DELETING AN ELEMENT WITH pop_back()
+        
+        pop_back deletes the last value and index of a vector so a vector with 3 indicies will become a
+        vector with 2 indicies if pop_back() is used.
+        
+        Let's delete an index and it's value in my_vector with:
+
+        my_vector.pop_back();
+
+        Continue to run the code!)";
+
+        cout << veclesson3 << "\n";
+
+        abc();
+
+        my_vector.pop_back();
+
+        /*
+        cout
+        eezo
+        eone
+        etwo
+        */
+        for (string element : my_vector) {
+            cout << element << "\n";
+        }
+
+        abc();
+       
+        string veclesson4 = R"(ADD NEW VALUE TO A VECTOR'S EXISTING INDEX
+        
+        To add a new value to an existing vector, simply:
+
+        my_vector[index] = "newValue";
+
+        Let's add 'second' to my_vector[1]
+
+        my_vector[1] = "second"
+
+        Continue to run the code!
+
+        )";
+
+        cout << veclesson4 << "\n";
+
+        abc();
+
+        my_vector[1] = "second";
+
+        /*
+        cout
+        eezo
+        second
+        etwo
+        */
+        for (string element : my_vector) {
+            cout << element << "\n";
+        }
+
+    }
 
 // menu for declarations lesson.
 void declarations_menu() {
-
-    cout << "Declarations menu goes here\n" << endl;
-
 
     while(true) {
 
@@ -247,9 +367,9 @@ void declarations_menu() {
         SELECT A TOPIC FOR REVIEW
         0 = EXIT TO MAIN
         1 = BASIC DATATYPES
-        2 = COLLECTION DATATYPE: ARRAY)";
+        2 = COLLECTION DATATYPE: ARRAY)
+        3 = COLLECTION DATATYPE: VECTOR)";
 
-      
         cout << s_main_menu << endl;
         
         // user selection integer
@@ -260,7 +380,7 @@ void declarations_menu() {
         }
         // since each menu will have unique ranges, this line will need to be added into each menu selection
         // TODO REMEMBER TO UPDATE AS EACH MENU IS ADDED
-        if (dec_selection < 0 || dec_selection > 2){
+        if (dec_selection < 0 || dec_selection > 3){
             cout << "SELECTION OUT OF RANGE!\n" << endl;
             continue;
         }
@@ -272,6 +392,9 @@ void declarations_menu() {
         }
         if (dec_selection == 2) {
             datatype_collections_array();
+        }
+        if (dec_selection == 3) {
+            cdatatype_vector();
         }
 
     }
