@@ -269,7 +269,7 @@ using namespace std;
 
         string veclesson2 = R"(APPENDING VECTORS WITH push_back()
         
-        Since vectors can have additional indicies added to them, use push_back(value) to add a new value an index!
+        Since vectors can have additional indicies added to them, use push_back(value) to add a new value and index!
         such that:
 
         my_vector.push_back("ethree");
@@ -429,6 +429,33 @@ using namespace std;
 
         abc();
 
+        string veclesson7 = R"(INSERTING A NEW VALUE AND INDEX WITH .insert()
+        
+        This will add whatever value and a new index to the vector. If you chose an existing index, the index that was originally there will
+        be moved one index back, and your new index value pair will go into the postion the original index value pair was at.
+        
+        Syntax is: vectorName.insert(vectorName.begin() + indexYouWantToPutIt, "whatYouWantToPutThere);
+        
+        Let's close out vectors with this code
+        
+        my_vector.insert(my_vector.begin() + 1, "end of lesson");
+
+        This code will add 'end of lesson' to my vector at the second index. 
+
+        Let's run it
+        )";
+
+        cout << veclesson7 << "\n";
+
+        abc();
+
+        my_vector.insert(my_vector.begin() + 1, "end of lesson");
+
+        for (string element : my_vector) {
+            cout << element << "\n";
+        }
+
+        abc();
     }
 
         
