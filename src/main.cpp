@@ -26,7 +26,7 @@ int main () {
         string main_menu = R"(MAIN MENU
         SELECT LEARNING OBJECTIVE
         0 = EXIT PROGRAM
-        1 = DECLARATIONS
+        1 = DECLARATIONS MENU
         2 = SELECTIONS MENU)"; 
 
         // print main navigation menu

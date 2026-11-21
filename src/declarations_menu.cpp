@@ -470,7 +470,7 @@ void declarations_menu() {
         SELECT A TOPIC FOR REVIEW
         0 = EXIT TO MAIN
         1 = BASIC DATATYPES
-        2 = COLLECTION DATATYPE: ARRAY)
+        2 = COLLECTION DATATYPE: ARRAY
         3 = COLLECTION DATATYPE: VECTOR)";
 
         cout << s_main_menu << endl;
