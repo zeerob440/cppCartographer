@@ -181,7 +181,7 @@ using namespace std;
 
         string string_array[3] = {"eezo", "eone", "etwo"};
 
-        STANDARD_LIBRARY array syntax: array libray_array(dataType, numIndicies) = {eezo, eone, etwo};
+        STANDARD_LIBRARY array syntax: array libray_array<dataType, numIndicies> = {eezo, eone, etwo};
 
         for example: 
 
@@ -356,8 +356,82 @@ using namespace std;
             cout << element << "\n";
         }
 
+
+
+        string veclesson5 = R"(VECTOR: DELETING AN INDEX and VALUE WITH begin(), and erase().
+        
+        To delete a VALUE and its INDEX anywhere in the vector you must use begin() and erase().
+
+        This can be risky because it shrinks the vector by one index. When used it ought to be well documented
+
+        syntax is:
+
+        my_vec.erase(my_vec.begin() + indexFromZerothIndex);
+
+        OR 
+
+        my_vector.erase(my_vector.begin() + 1);
+
+        This command should erase second
+
+        Continue to run the code!)";
+
+        cout << veclesson5 << "\n"; 
+
+        abc();
+
+        // code will erase second from my vector.
+        // my_vector now contains 3 indicies.
+        my_vector.erase(my_vector.begin() + 1);
+
+        /*
+        cout 
+        eezo
+        etwo
+        */
+
+        for (string element : my_vector) {
+            cout << element << "\n"; 
+
+        }
+
+        abc();
+
+        string veclesson6 = R"(CLEARING AN INDEX VALUE WITHOUT DELETING THE INDEX WITH .clear()
+        
+        The safer method for removing a value at and index is .clear()
+
+        This allows the value to be removed while keeping the index intact
+
+        syntax: vectorName[indexElementToClear].clear();
+
+        my_vector[1].clear();
+
+        This code will clear etwo from the list when we cout it, a blankline will print.
+
+        Continue to run it.
+        )";
+
+        cout << veclesson6 << "\n"; 
+        abc();
+
+        my_vector[1].clear();
+
+        /*
+        cout
+        eezo
+
+
+        */
+        for (string element : my_vector) {
+            cout << element << "\n";
+        }
+
+        abc();
+
     }
 
+        
 // menu for declarations lesson.
 void declarations_menu() {
 
