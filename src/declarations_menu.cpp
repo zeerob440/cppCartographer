@@ -2,6 +2,7 @@
 #include <string>
 #include <array>
 #include <vector>
+#include <map>
 #include "../include/abc.hpp"
 #include "../include/validthing.hpp"
 using namespace std;
@@ -231,9 +232,9 @@ using namespace std;
         cout << "THIS CONCLUDES THIS MODULE\n" << endl;
         
         abc();
-
-
     }
+    // contains vector lessons
+    // child function of declarations_menu()
     void cdatatype_vector() {
         string veclesson = R"(VECTORS
         
@@ -458,6 +459,50 @@ using namespace std;
         abc();
     }
 
+    // contains map lessons
+    // child function of declarations menu.
+    void map_lessons(){
+
+        string mapl1 = R"(MAPS
+        Maps are collections that contain key'value pairs they are part of the std library. To use a map, 
+        it must first be include with the command #include <map>.
+
+        maps must have one key/value relationship but can contain several key/value pairs that share that relationship.
+        any two datatypes can used for the key/value pair. Such as a string and a vector.
+        such as:
+        
+         map <string, string> nostromo = {
+            {"Captain", "Dallas"},
+            {"Executive Officer", "Kane"},
+            {"Warrant Officer", "Ripley"},
+            {"Science Officer", "Ash"},
+            {"Ship's Cat", "Jones"}
+        };
+
+        syntax for a map is:
+
+        map <keyDataType, valueDataType> mapName = {{key1, value1}, {key2, value2}};
+
+        The nostromo map s what we will use to learn about maps.
+        )";
+
+        cout << mapl1 << "\n";
+
+        abc();
+
+        // Crew complement of nostromo 
+        map <string, string> nostromo = {
+            {"Captain", "Dallas"},
+            {"Executive Officer", "Kane"},
+            {"Warrant Officer", "Ripley"},
+            {"Science Officer", "Ash"},
+            {"Ship's Cat", "Jones"}
+        };
+
+        abc();
+
+    }
+
         
 // menu for declarations lesson.
 void declarations_menu() {
@@ -471,7 +516,8 @@ void declarations_menu() {
         0 = EXIT TO MAIN
         1 = BASIC DATATYPES
         2 = COLLECTION DATATYPE: ARRAY
-        3 = COLLECTION DATATYPE: VECTOR)";
+        3 = COLLECTION DATATYPE: VECTOR
+        4 = COLLECTION DATAYPE: MAP)";
 
         cout << s_main_menu << endl;
         
