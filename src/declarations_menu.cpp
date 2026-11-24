@@ -489,7 +489,6 @@ using namespace std;
 
         cout << mapl1 << "\n";
 
-        abc();
 
         // Crew complement of nostromo 
         map <string, string> nostromo = {
@@ -525,7 +524,7 @@ using namespace std;
         Let's run this code!
         )";
 
-        cout << mapl2 << "/n";
+        cout << mapl2 << "\n";
 
         // outputs Dallas
         cout << nostromo.at("Captain") << "\n";
@@ -558,7 +557,7 @@ using namespace std;
     
             if (search != nostromo.end()) {
             
-            cout << search->first << ":" << search->second << "\n";
+            cout << search->first << ": " << search->second << "\n";
             break;
             }
              
@@ -571,7 +570,7 @@ using namespace std;
         In this example, try to find a key value pair by searching the map nostromo by rank.
         )";
 
-        cout << mapl3 << "/n";
+        cout << mapl3 << "\n";
 
         abc();
 
@@ -598,7 +597,7 @@ using namespace std;
             if (search != nostromo.end()) {
             
             // output the key value pair with ->first for the key and -> second for the value.
-            cout << search->first << ":" << search->second << "\n";
+            cout << search->first << ": " << search->second << "\n";
             break;
             }
             // else search again, does not need rank.clear() because it resides in a while loop. 
