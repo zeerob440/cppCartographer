@@ -527,8 +527,6 @@ using namespace std;
 
         cout << mapl2 << "/n";
 
-        abc();
-
         // outputs Dallas
         cout << nostromo.at("Captain") << "\n";
         // outputs Jones
