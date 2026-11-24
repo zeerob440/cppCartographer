@@ -468,6 +468,8 @@ using namespace std;
         Maps are collections that contain key'value pairs they are part of the std library. To use a map, 
         it must first be include with the command #include <map>.
 
+        Interestingly, C++ maps do not have indicies, instead they are order by ASCII code from A-z. So updates, are ordered as such.
+
         maps must have one key/value relationship but can contain several key/value pairs that share that relationship.
         any two datatypes can used for the key/value pair. Such as a string and a vector.
         such as:
@@ -607,7 +609,7 @@ using namespace std;
         }
 
         abc();
-          
+        // TODO, add updating keys and values to with .at and mapName[keyName]  
     }
 
         
