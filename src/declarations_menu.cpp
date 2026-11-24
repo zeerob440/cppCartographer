@@ -643,10 +643,9 @@ void declarations_menu() {
         }
         if (dec_selection == 3) {
             cdatatype_vector();
-        if (dec_selection ==4){
+        }    
+        if (dec_selection == 4){
             map_lessons();
         }
-        }
-
     }
 }
