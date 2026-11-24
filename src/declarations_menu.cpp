@@ -456,6 +456,7 @@ using namespace std;
             cout << element << "\n";
         }
 
+        cout << "THIS CONCLUDES THIS MODULE\n" << endl;
         abc();
     }
 
@@ -499,8 +500,106 @@ using namespace std;
             {"Ship's Cat", "Jones"}
         };
 
+
         abc();
 
+        string  mapl2 = R"(READING INFO FROM A MAP WITH .at(), AND mapName[keyName]
+
+        .at(keyHere) or mapName[keyHere] can read and access the VALUE associated with the key. Keys are how maps are searched.
+
+        SYNTAX
+        mapName.at(KeyName);
+        OR
+        mapName[Keyname];
+
+        cout << nostromo.at("Captain") << "\n";
+
+        cout << nostromo["Ship's Cat"] << "\n"
+
+        WHAT HAPPENS IF A KEY IS MISSING
+
+        .at() throws a out_of_range error, to except this error <stdxecept> needs to be included in the header otherwise the program will crash.
+
+        WARNING: mapName[keyName] creates the searched key but adds an empty value. The program will continue
+
+        Let's run this code!
+        )";
+
+        cout << mapl2 << "/n";
+
+        abc();
+
+        // outputs Dallas
+        cout << nostromo.at("Captain") << "\n";
+        // outputs Jones
+        cout << nostromo["Ship's Cat"] << "\n";
+
+        abc();
+
+        string mapl3 = R"(READING KEY VALUE PAIR OR KEY WITH find() ->first ->second
+        
+        Reading key value pairs with .find() is a stable way to read a map. If find() does not find any matching key, it does not create a key with a
+        an empty value like mapName[keyName], or throw an out_of_range error like .find()
+
+        while (true){
+
+            cout << "Enter Rank to search crew member: "; 
+            
+            string rank;
+            getline(cin, rank);
+            
+            auto search = nostromo.find(rank);
+
+            if (search != nostromo.end()) {
+            
+            cout << search->first << ":" << search->second << "\n";
+            break;
+            }
+
+            else {
+                cout << "Rank is not part of Nostromo compliment." << "\n";
+            }
+
+        }
+
+        In this example, try to find a key value pair by searching the map nostromo by rank.
+        )";
+
+        cout << mapl3 << "/n";
+
+        abc();
+
+        while (true){
+
+            cout << "Enter Rank to search crew member: "; 
+            // takes user input assigns it to rank
+            string rank;
+            getline(cin, rank);
+
+            if (nostromo.contains(rank)) {
+            cout << "Is crewmember aboard" << "\n";
+            }
+
+            // searches map nostromo for that rank
+            auto search = nostromo.find(rank);
+    
+
+            // if the search finds the key before reaching the end of the map... 
+            if (search != nostromo.end()) {
+            
+            // output the key value pair with ->first for the key and -> second for the value.
+            cout << search->first << ":" << search->second << "\n";
+            break;
+            }
+            // else search again, does not need rank.clear() because it resides in a while loop. 
+            else {
+                cout << "Rank is not part of Nostromo compliment." << "\n";
+            }
+
+        }
+
+        abc();
+          
     }
 
         
