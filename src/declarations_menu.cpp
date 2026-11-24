@@ -534,26 +534,34 @@ using namespace std;
 
         abc();
 
-        string mapl3 = R"(READING KEY VALUE PAIR OR KEY WITH find() ->first ->second
+        string mapl3 = R"(READING KEY VALUE PAIR OR KEY WITH .find() ->first ->second AND contains()
         
         Reading key value pairs with .find() is a stable way to read a map. If find() does not find any matching key, it does not create a key with a
         an empty value like mapName[keyName], or throw an out_of_range error like .find()
 
-        while (true){
+        contains() returns a bool true or false, or 0 , or 1 in cout when used on a map. It does not cause a program crash, it simply checks if the key exists.
 
-            cout << "Enter Rank to search crew member: "; 
+        cout << "Enter Rank to search crew member: "; 
             
             string rank;
             getline(cin, rank);
-            
-            auto search = nostromo.find(rank);
 
+          
+            if (nostromo.contains(rank)) {
+            cout << "Crewmember is aboard." << "\n";
+            }
+            else{
+                cout << "Crew member is not aboard." << "\n";
+            }
+
+            auto search = nostromo.find(rank);
+    
             if (search != nostromo.end()) {
             
             cout << search->first << ":" << search->second << "\n";
             break;
             }
-
+             
             else {
                 cout << "Rank is not part of Nostromo compliment." << "\n";
             }
@@ -574,8 +582,12 @@ using namespace std;
             string rank;
             getline(cin, rank);
 
+            // contains() returns a bool, if true, it returns the if branch. If false it returns the else branch
             if (nostromo.contains(rank)) {
-            cout << "Is crewmember aboard" << "\n";
+            cout << "Crewmember is aboard." << "\n";
+            }
+            else{
+                cout << "Crew member is not aboard." << "\n";
             }
 
             // searches map nostromo for that rank
