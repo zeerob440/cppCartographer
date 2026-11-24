@@ -484,7 +484,7 @@ using namespace std;
 
         map <keyDataType, valueDataType> mapName = {{key1, value1}, {key2, value2}};
 
-        The nostromo map s what we will use to learn about maps.
+        The nostromo map is the example we will use to learn about maps.
         )";
 
         cout << mapl1 << "\n";
