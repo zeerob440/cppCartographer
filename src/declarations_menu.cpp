@@ -628,7 +628,7 @@ void declarations_menu() {
         }
         // since each menu will have unique ranges, this line will need to be added into each menu selection
         // TODO REMEMBER TO UPDATE AS EACH MENU IS ADDED
-        if (dec_selection < 0 || dec_selection > 3){
+        if (dec_selection < 0 || dec_selection > 4){
             cout << "SELECTION OUT OF RANGE!\n" << endl;
             continue;
         }
