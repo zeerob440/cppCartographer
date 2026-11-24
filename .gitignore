@@ -1,2 +1,5 @@
-
+# c++ artifacts 
+*.obj
+*.exe
+*.o
 /.vscode/c_cpp_properties.json
