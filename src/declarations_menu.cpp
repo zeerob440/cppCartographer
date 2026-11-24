@@ -592,7 +592,6 @@ using namespace std;
             // searches map nostromo for that rank
             auto search = nostromo.find(rank);
     
-
             // if the search finds the key before reaching the end of the map... 
             if (search != nostromo.end()) {
             
