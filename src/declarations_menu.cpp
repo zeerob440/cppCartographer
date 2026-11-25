@@ -479,6 +479,9 @@ using namespace std;
             {"Executive Officer", "Kane"},
             {"Warrant Officer", "Ripley"},
             {"Science Officer", "Ash"},
+            {"Navigator", "Lambert"},
+            {"Chief Engineer", "Parker"},
+            {"Engineer", "Brett"},
             {"Ship's Cat", "Jones"}
         };
 
@@ -498,6 +501,9 @@ using namespace std;
             {"Executive Officer", "Kane"},
             {"Warrant Officer", "Ripley"},
             {"Science Officer", "Ash"},
+            {"Navigator", "Lambert"},
+            {"Chief Engineer", "Parker"},
+            {"Engineer", "Brett"},
             {"Ship's Cat", "Jones"}
         };
 
@@ -636,7 +642,7 @@ using namespace std;
         Adding KV pairs to a map is easy, but the new pair is ordered by ASCII A-z.
 
 
-        nostromo["Engineer"] = "Parker";
+        nostromo["Alien"] = "Xenomorph";
 
         let's run these codes!
         )";
@@ -651,6 +657,9 @@ using namespace std;
         // MU/TH/ER
         cout << "Now Captain is: " << nostromo["Captain"] << "\n";
 
+        // Ripley has been promoted to captain
+        nostromo.erase("Warrant Officer");
+
         //updating a value using .at()
 
          // MU/TH/ER
@@ -662,11 +671,11 @@ using namespace std;
 
         /*adding a new KV pair
         C++ maps do not use indices, rather, KV pairs are ordered by ASCII A-z
-        So adding Engineer Parker will place the record between "Captain" and "Executive Officer"
+        So adding Alien Xenomorph will place the record at the top of the map"
         */
-        nostromo["Engineer"] = "Parker";
+        nostromo["Alien"] = "Xenomroph";
         //parker
-        cout << "Engineer has been added to nostromo map. " << "Engineer: " << nostromo["Engineer"] << "\n";
+        cout << "Alien has been added to nostromo map. " << "Alien: " << nostromo["Alien"] << "\n";
 
         abc();
         
@@ -681,7 +690,7 @@ using namespace std;
         auto find_y_update = nostromo.find("Executive Officer");
         
         if (find_y_update != nostromo.end()) {
-            find_y_update->second = "Xenomorph";
+            find_y_update->second = "Face-hugged";
         }
 
         This method cannot also be used to update a KEY because KEYS ARE READ ONLY
@@ -698,11 +707,58 @@ using namespace std;
         auto find_y_update = nostromo.find("Executive Officer");
         // use .end() with .find() to search to the end of the map, if not the end, change the value with ->second.
         if (find_y_update != nostromo.end()) {
-            find_y_update->second = "Xenomorph";
+            find_y_update->second = "Face-hugged";
         }
         
-        cout << "Executive Officer is now the: " << nostromo["Executive Officer"] << "\n";
+        cout << "Executive Officer is now : " << nostromo["Executive Officer"] << "\n";
 
+        abc();
+
+        string mapl6 = R"(DELETING KV PAIRS IN A MAP WITH .erase()
+        .erase() deletes key value pairs in a map using the key as an arg.
+
+        mapName.erase(keyName)
+
+        nostromo.erase("Executive Officer");
+        nostromo.erase("Engineer");
+        nostromo.erase("Science Officer");
+        nostromo.erase("Navigatior");
+        nostromo.erase("Chief Engineer");
+        nostromo.erase("Warrant Officer");
+
+        Let's run it, search crew by Rank
+        )";
+
+        abc();
+
+        cout << mapl6 << "\n";
+        // delete the crew of nostromo
+        nostromo.erase("Executive Officer");
+        nostromo.erase("Engineer");
+        nostromo.erase("Science Officer");
+        nostromo.erase("Navigatior");
+        nostromo.erase("Chief Engineer");
+        nostromo.erase("Warrant Officer");
+
+        // the disaster continues...
+
+        while (true){
+            cout << "Search Rank for crewmember. Enter 0 to exit" << "\n";
+            string search;
+            getline(cin, search);
+            if (search == "0"){
+                break;
+            }
+            else {
+                if (nostromo.contains(search)){
+                    cout << nostromo[search] << " is aboard." << "\n";
+                }
+                else {
+                    cout << search << " is not aboard." << "\n";
+                }
+            }  
+        }
+        
     }
              
 // menu for declarations lesson.
