@@ -13,7 +13,8 @@ using namespace std;
     void basic_datatypes() {
         cout << "C++ BASIC DATATYPES\n";
 
-        string datatype1 = R"(INTEGERS
+        string datatype1 = R"(
+        INTEGERS
         
         int is integer between -2,147,483,648 and 2,147,483,647
 
@@ -35,7 +36,8 @@ using namespace std;
 
         abc();
 
-        string datatype2 = R"(FLOATING POINTS
+        string datatype2 = R"(
+        FLOATING POINTS
         
         double is the DEFAULT floating point declaration, it is accurate to 64-bits of precision, this means 15-16 decimal places.
         
@@ -66,7 +68,8 @@ using namespace std;
 
         abc();
 
-        string datatype3 = R"(BOOLEANS
+        string datatype3 = R"(
+        BOOLEANS
         
         Booleans are my favorite datatype. These datatypes are true or false. 
         Truthiness applies to integers and floats in C++ as well 0 is false, any other number is true
@@ -105,7 +108,9 @@ using namespace std;
 
         abc();
 
-        string datatype4 = R"(CHAR
+        string datatype4 = R"(
+        CHAR
+
         Chars are a single charater datatype they are string like, in declaration they ONLY use '' to declare them. They occupy 1 byte of memory and can
         be readily converted to an int type.
 
@@ -129,7 +134,8 @@ using namespace std;
 
         abc();
 
-        string datatype5 = R"(STRINGS
+        string datatype5 = R"(
+        STRINGS
         
         strings are a SPECIAL datatype in C++ and must be imported from the C++ standard library to be used
         
@@ -167,7 +173,8 @@ using namespace std;
     void datatype_collections_array() {
         cout << "COLLECTION DATATYPE ARRAY\n";
 
-        string collesson1 = R"(ARRAYS
+        string collesson1 = R"(
+        ARRAYS
         
         There are two types of ARRAYS in C++ the built-in array and the std library array accessed by #include <array>).
         We'll go through both examples. 
@@ -214,7 +221,7 @@ using namespace std;
         abc();
 
         // string for next example array.
-        string stdlib_array = R"( array <int, 3> int_array = {0, 10, 20})";
+        string stdlib_array = R"(array <int, 3> int_array = {0, 10, 20})";
         cout << "Next we will cout:" << "\n" << stdlib_array << "\n" << "Continue to run code" << "\n";
 
         abc();
@@ -236,7 +243,8 @@ using namespace std;
     // contains vector lessons
     // child function of declarations_menu()
     void cdatatype_vector() {
-        string veclesson = R"(VECTORS
+        string veclesson = R"(
+        VECTORS
         
         Vectors require and #include <vector> to be used. Vectors require same datatype, but 
         unlike an array, indicies in a vector are not fixed. 
@@ -268,7 +276,8 @@ using namespace std;
 
         abc();
 
-        string veclesson2 = R"(APPENDING VECTORS WITH push_back()
+        string veclesson2 = R"(
+        APPENDING VECTORS WITH push_back()
         
         Since vectors can have additional indicies added to them, use push_back(value) to add a new value and index!
         such that:
@@ -298,7 +307,8 @@ using namespace std;
 
         abc();
 
-        string veclesson3 = R"(DELETING AN ELEMENT WITH pop_back()
+        string veclesson3 = R"(
+        DELETING AN ELEMENT WITH pop_back()
         
         pop_back deletes the last value and index of a vector so a vector with 3 indicies will become a
         vector with 2 indicies if pop_back() is used.
@@ -327,7 +337,8 @@ using namespace std;
 
         abc();
        
-        string veclesson4 = R"(ADD NEW VALUE TO A VECTOR'S EXISTING INDEX
+        string veclesson4 = R"(
+        ADD NEW VALUE TO A VECTOR'S EXISTING INDEX
         
         To add a new value to an existing vector, simply:
 
@@ -359,7 +370,8 @@ using namespace std;
 
 
 
-        string veclesson5 = R"(VECTOR: DELETING AN INDEX and VALUE WITH begin(), and erase().
+        string veclesson5 = R"(
+        VECTOR: DELETING AN INDEX and VALUE WITH begin(), and erase().
         
         To delete a VALUE and its INDEX anywhere in the vector you must use begin() and erase().
 
@@ -398,7 +410,8 @@ using namespace std;
 
         abc();
 
-        string veclesson6 = R"(CLEARING AN INDEX VALUE WITHOUT DELETING THE INDEX WITH .clear()
+        string veclesson6 = R"(
+        CLEARING AN INDEX VALUE WITHOUT DELETING THE INDEX WITH .clear()
         
         The safer method for removing a value at and index is .clear()
 
@@ -430,7 +443,8 @@ using namespace std;
 
         abc();
 
-        string veclesson7 = R"(INSERTING A NEW VALUE AND INDEX WITH .insert()
+        string veclesson7 = R"(
+        INSERTING A NEW VALUE AND INDEX WITH .insert()
         
         This will add whatever value and a new index to the vector. If you chose an existing index, the index that was originally there will
         be moved one index back, and your new index value pair will go into the postion the original index value pair was at.
@@ -464,7 +478,9 @@ using namespace std;
     // child function of declarations menu.
     void map_lessons(){
 
-        string mapl1 = R"(MAPS
+        string mapl1 = R"(
+        MAPS
+
         Maps are collections that contain key'value pairs they are part of the std library. To use a map, 
         it must first be include with the command #include <map>.
 
@@ -510,7 +526,8 @@ using namespace std;
 
         abc();
 
-        string  mapl2 = R"(READING INFO FROM A MAP WITH .at(), AND mapName[keyName]
+        string  mapl2 = R"(
+        READING INFO FROM A MAP WITH .at(), AND mapName[keyName]
 
         .at(keyHere) or mapName[keyHere] can read and access the VALUE associated with the key. Keys are how maps are searched.
 
@@ -541,7 +558,8 @@ using namespace std;
 
         abc();
 
-        string mapl3 = R"(READING KEY VALUE PAIR OR KEY WITH .find() ->first ->second AND contains()
+        string mapl3 = R"(
+        READING KEY VALUE PAIR OR KEY WITH .find() ->first ->second AND contains()
         
         Reading key value pairs with .find() is a stable way to read a map. If find() does not find any matching key, it does not create a key with a
         an empty value like mapName[keyName], or throw an out_of_range error like .find()
@@ -616,7 +634,8 @@ using namespace std;
 
         abc();
 
-        string mapl4 = R"(UPDATING KEYS AND VALUES WITH .at(), .find() and mapName[])
+        string mapl4 = R"(
+        UPDATING KEYS AND VALUES WITH .at(), .find() and mapName[])
         
         Updating values is a common map operation. 
         
@@ -679,7 +698,8 @@ using namespace std;
 
         abc();
         
-        string mapl5 = R"(UPDATING A VALUE WITH .find() .end() AND ->second
+        string mapl5 = R"(
+        UPDATING A VALUE WITH .find() .end() AND ->second
 
         Using .find() ->second is a good way to update a value but it is also a bit more complex to set up:
         1. declare var that contains find(keyName)
@@ -714,7 +734,9 @@ using namespace std;
 
         abc();
 
-        string mapl6 = R"(DELETING KV PAIRS IN A MAP WITH .erase()
+        string mapl6 = R"(
+        DELETING KV PAIRS IN A MAP WITH .erase()
+        
         .erase() deletes key value pairs in a map using the key as an arg.
 
         mapName.erase(keyName)
@@ -729,9 +751,9 @@ using namespace std;
         Let's run it, search crew by Rank
         )";
 
-        abc();
-
         cout << mapl6 << "\n";
+
+        abc();
         // delete the crew of nostromo
         nostromo.erase("Executive Officer");
         nostromo.erase("Engineer");
@@ -759,6 +781,59 @@ using namespace std;
             }  
         }
         
+        string mapl7 = R"(
+        COPYING A MAP TO A NEW MAP
+        
+        Only Ripley, Jones, and the Xenomorph remain aboard Nostromo! 
+        All that is left to do is set Nostromo's self-destruct and escape to Narcissus... with Jones of course. 
+    
+        C++ does not seem to have a built in collection copy function like Python.
+
+        auto narcissus = nostromo;
+        OR
+        map <string, string> narcissus = nostromo;
+        
+        DELETING A MAP WITH .clear()
+
+        The crew has boarded Narcissus, and nostrmo self-destructs...
+
+        nostromo.clear()
+
+        The clear() function empties the contents of the map, and erases it when the user has left
+        the scope of where the map was declared. 
+
+        Let's run it.
+        )";
+
+        cout << mapl7 << "\n";
+        abc();
+        // method for copying a map
+        // can also be declared as auto narcissus = nostromo;
+        map <string, string> narcissus = nostromo; 
+
+        //destroy nostromo. 
+        nostromo.clear();
+
+        cout << "Narcissus Crew: " << narcissus["Captain"] << ", " << narcissus["Ship's Cat"] 
+        << ", " << narcissus["Alien"] << "\n";
+
+        cout << "But the Xenomorph has snuck aboard the shuttle. " << " continue to use .erase() to jettision Alien."
+        << "\n";
+
+        abc();
+        // jettisons Xenomorph from Narcissus. 
+        narcissus.erase("Alien");
+        // check if alien is there with contains()
+
+        if (narcissus.contains("Alien") == false){
+            cout << "ALIEN JETTISIONED." << "\n";
+            cout << "This is Ripley, last survior of the Nostromo, signing off." << "\n";
+        }
+        else {
+            cout << "I must have seen a different movie." << "\n";
+        }
+
+        cout << "THIS CONCLUDES THIS MODULE" << "\n";
     }
              
 // menu for declarations lesson.
