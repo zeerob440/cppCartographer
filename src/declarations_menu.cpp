@@ -614,7 +614,7 @@ using namespace std;
         
         Updating values is a common map operation. 
         
-        UPDATING A VALUE with mapName[keyName] = newValueName)
+        UPDATING A VALUE WITH mapName[keyName] = newValueName)
         
         This is the most direct method to update a value, however if the KEY does not exist
         C++ will assign [] to a KEY and insert the VALUE associated with it.
@@ -645,7 +645,7 @@ using namespace std;
         abc();
 
         // Dallas
-        cout << "Captain is currently: " << nostromo["Captain"] << endl;
+        cout << "Captain is currently: " << nostromo["Captain"] << "\n";
         // update to MU/TH/ER
         nostromo["Captain"] = "MU/TH/ER";
         // MU/TH/ER
@@ -654,7 +654,7 @@ using namespace std;
         //updating a value using .at()
 
          // MU/TH/ER
-        cout << "Captain is Currently: " << nostromo["Captain"] << endl;
+        cout << "Captain is Currently: " << nostromo["Captain"] << "\n";
         // update to Ripley
         nostromo.at("Captain") = "Ripley";
         // Ripley
@@ -668,17 +668,41 @@ using namespace std;
         //parker
         cout << "Engineer has been added to nostromo map. " << "Engineer: " << nostromo["Engineer"] << "\n";
 
+        abc();
+        
         string mapl5 = R"(UPDATING A VALUE WITH .find() .end() AND ->second
 
-        Using .find() ->second is a good way to update a value but it is also a bit more complex to set up:)";
+        Using .find() ->second is a good way to update a value but it is also a bit more complex to set up:
+        1. declare var that contains find(keyName)
+        2. create if statement to search the map to the end()
+        3. if not end of map and keyName located
+        4. use -> second to update the value
 
+        auto find_y_update = nostromo.find("Executive Officer");
+        
+        if (find_y_update != nostromo.end()) {
+            find_y_update->second = "Xenomorph";
+        }
+
+        This method cannot also be used to update a KEY because KEYS ARE READ ONLY
+        Let's demo this code!
+        )";
+
+        cout << mapl5 << "\n";
+
+        abc();
+
+        cout << "Executive Officer is: " << nostromo["Executive Officer"] << "\n";
         // updating a value with .find()
         // declare var that uses search
         auto find_y_update = nostromo.find("Executive Officer");
         // use .end() with .find() to search to the end of the map, if not the end, change the value with ->second.
-        if (find_y_update !=nostromo.end()) {
+        if (find_y_update != nostromo.end()) {
             find_y_update->second = "Xenomorph";
         }
+        
+        cout << "Executive Officer is now the: " << nostromo["Executive Officer"] << "\n";
+
     }
              
 // menu for declarations lesson.
