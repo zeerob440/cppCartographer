@@ -484,7 +484,8 @@ using namespace std;
         Maps are collections that contain key'value pairs they are part of the std library. To use a map, 
         it must first be include with the command #include <map>.
 
-        Interestingly, C++ maps do not have indicies, instead they are order by ASCII code from A-z. So updates, are ordered as such.
+        Interestingly, C++ maps do not have indicies, instead they are order by ASCII code from A-z.
+        So updates, are ordered as such.
 
         maps must have one key/value relationship but can contain several key/value pairs that share that relationship.
         any two datatypes can used for the key/value pair. Such as a string and a vector.
@@ -697,7 +698,7 @@ using namespace std;
         C++ maps do not use indices, rather, KV pairs are ordered by ASCII A-z
         So adding Alien Xenomorph will place the record at the top of the map"
         */
-        nostromo["Alien"] = "Xenomroph";
+        nostromo["Alien"] = "Xenomorph";
         //parker
         cout << "Alien has been added to nostromo map. " << "Alien: " << nostromo["Alien"] << "\n";
 
@@ -832,14 +833,14 @@ using namespace std;
         // check if alien is there with contains()
 
         if (narcissus.contains("Alien") == false){
-            cout << "ALIEN JETTISIONED." << "\n";
-            cout << "This is Ripley, last survior of the Nostromo, signing off." << "\n";
+            cout << "ALIEN JETTISIONED." << "\n" << endl;
+            cout << "This is Ripley, last survior of the Nostromo, signing off." << "\n" << endl;
         }
         else {
-            cout << "I must have seen a different movie." << "\n";
+            cout << "I must have seen a different movie." << "\n" << endl;
         }
 
-        cout << "THIS CONCLUDES THIS MODULE" << "\n";
+        cout << "THIS CONCLUDES THIS MODULE" << "\n" << endl;
     }
              
 // menu for declarations lesson.
