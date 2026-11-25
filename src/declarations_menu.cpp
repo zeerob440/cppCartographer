@@ -654,7 +654,7 @@ using namespace std;
         //updating a value using .at()
 
          // MU/TH/ER
-        cout << "Captain is Currently: " << nostromo["Captain"] << "\n";
+        cout << "Captain is currently: " << nostromo["Captain"] << "\n";
         // update to Ripley
         nostromo.at("Captain") = "Ripley";
         // Ripley
