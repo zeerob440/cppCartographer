@@ -609,10 +609,78 @@ using namespace std;
         }
 
         abc();
-        // TODO, add updating keys and values to with .at and mapName[keyName]  
-    }
 
+        string mapl4 = R"(UPDATING KEYS AND VALUES WITH .at(), .find() and mapName[])
         
+        Updating values is a common map operation. 
+        
+        UPDATING A VALUE with mapName[keyName] = newValueName)
+        
+        This is the most direct method to update a value, however if the KEY does not exist
+        C++ will assign [] to a KEY and insert the VALUE associated with it.
+
+        // updating a value
+        nostromo["Captain"] = "MU/TH/ER";
+
+        UPDATING A VALUE WITH .at()
+
+        mapname.at(keyName) = newValueName;
+
+        updating a value with .at() is a bit safer than the aforementioned method, if the key does not
+        exist in the map it will throw an out_of_range error instead of inserting an empty key.
+
+        nostromo.at("Captain") = "Ripley";
+
+        ADDING A KV PAIR
+
+        Adding KV pairs to a map is easy, but the new pair is ordered by ASCII A-z.
+
+
+        nostromo["Engineer"] = "Parker";
+
+        let's run these codes!
+        )";
+        
+        cout << mapl4 << "\n";
+        abc();
+
+        // Dallas
+        cout << "Captain is currently: " << nostromo["Captain"] << endl;
+        // update to MU/TH/ER
+        nostromo["Captain"] = "MU/TH/ER";
+        // MU/TH/ER
+        cout << "Now Captain is: " << nostromo["Captain"] << "\n";
+
+        //updating a value using .at()
+
+         // MU/TH/ER
+        cout << "Captain is Currently: " << nostromo["Captain"] << endl;
+        // update to Ripley
+        nostromo.at("Captain") = "Ripley";
+        // Ripley
+        cout << "Now Captain is: " << nostromo["Captain"] << "\n";
+
+        /*adding a new KV pair
+        C++ maps do not use indices, rather, KV pairs are ordered by ASCII A-z
+        So adding Engineer Parker will place the record between "Captain" and "Executive Officer"
+        */
+        nostromo["Engineer"] = "Parker";
+        //parker
+        cout << "Engineer has been added to nostromo map. " << "Engineer: " << nostromo["Engineer"] << "\n";
+
+        string mapl5 = R"(UPDATING A VALUE WITH .find() .end() AND ->second
+
+        Using .find() ->second is a good way to update a value but it is also a bit more complex to set up:)";
+
+        // updating a value with .find()
+        // declare var that uses search
+        auto find_y_update = nostromo.find("Executive Officer");
+        // use .end() with .find() to search to the end of the map, if not the end, change the value with ->second.
+        if (find_y_update !=nostromo.end()) {
+            find_y_update->second = "Xenomorph";
+        }
+    }
+             
 // menu for declarations lesson.
 void declarations_menu() {
 
