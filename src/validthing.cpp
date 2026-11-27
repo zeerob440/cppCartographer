@@ -53,7 +53,8 @@ bool validthing(int& user_selection) {
 char get_char() {
 
     while (true) {
-
+    
+    cout << "Enter A OR B to run code:" << endl;
     char user_char;
     cin >> user_char;
 
