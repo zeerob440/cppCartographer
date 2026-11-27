@@ -98,16 +98,18 @@ using namespace std;
         // cout value
         if (if_else_choice == 'A') {
 
-            cout << "The value stored in if_else_choice is: " << if_else_choice 
+            cout << "The value stored in if_else_choice is: " << if_else_var 
             << "\n"; 
         }
         // cout memory address
         else {
-            cout << "The memory address of if_else_choice is: " << &if_else_choice <<
+            cout << "The memory address of if_else_choice is: " << &if_else_var <<
             "\n"; 
         }
 
         abc();
+
+        //TODO add if/elif/else lesson
     }
 
 // submenu for selections
