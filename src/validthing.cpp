@@ -67,6 +67,7 @@ char get_char() {
         cout << "INPUT A OR B!"<< "\n";
         continue;
     } 
+    }
 }
 
 
