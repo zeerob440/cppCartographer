@@ -7,7 +7,7 @@
 #include "../include/validthing.hpp"
 using namespace std;
 
-// TODO: complete vector lesson, add erase lessons.
+// TODO: add tuples lesson
 
     // basic datatype lesson, daughter function of declarations menu
     void basic_datatypes() {
@@ -842,7 +842,7 @@ using namespace std;
 
         cout << "THIS CONCLUDES THIS MODULE" << "\n" << endl;
     }
-             
+    // TODO: add tuples lesson here      
 // menu for declarations lesson.
 void declarations_menu() {
 

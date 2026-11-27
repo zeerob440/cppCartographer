@@ -49,5 +49,25 @@ bool validthing(int& user_selection) {
     }
 }
 
+// function for validating user input for chars
+char get_char() {
+
+    while (true) {
+
+    char user_char;
+    cin >> user_char;
+
+    if (user_char == 'A') {
+        return user_char;
+    }
+    else if (user_char == 'B') {
+        return user_char;
+    }
+    else  {
+        cout << "INPUT A OR B!"<< "\n";
+        continue;
+    } 
+}
+
 
 
